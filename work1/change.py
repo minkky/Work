@@ -30,5 +30,3 @@ with codecs.open(read_file, 'rU', 'utf-8') as f:
 			
 			with open(output_file, 'a') as file:
 				file.write(location+'\n')
-
-			i = i+1
