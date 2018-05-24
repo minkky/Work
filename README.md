@@ -2,9 +2,11 @@
 
 
 #for geometry
-db.collection_name.createIndex( { location: "2dsphere" } )
 
 <pre><code>
+
+db.collection_name.createIndex( { location: "2dsphere" } )
+
 db.collection.find({  
 	location:{  
 		$near :{  
