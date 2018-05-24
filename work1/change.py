@@ -1,7 +1,6 @@
 import codecs, json, sys
 
 data = []
-i = 0
 
 read_file = sys.argv[1]
 output_file = sys.argv[2]
