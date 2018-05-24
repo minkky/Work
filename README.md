@@ -4,7 +4,7 @@
 #for geometry
 db.collection_name.createIndex( { location: "2dsphere" } )
 
-
+<pre><code>
 db.collection.find({  
 	location:{  
 		$near :{  
@@ -14,3 +14,4 @@ db.collection.find({
 		}  
 	}  
 })  
+</code></pre>
