@@ -1,10 +1,12 @@
-import codecs
-import json
+import codecs, json, sys
 
 data = []
 i = 0
 
-with codecs.open('./t.json', 'rU', 'utf-8') as f:
+read_file = sys.argv[1]
+output_file = sys.argv[2]
+
+with codecs.open(read_file, 'rU', 'utf-8') as f:
 		for line in f:
 			strr = json.loads(line)
 			strr = str(strr)
@@ -25,9 +27,8 @@ with codecs.open('./t.json', 'rU', 'utf-8') as f:
 			if LAT != "" and LNG != "":
 				location = "{ location : { type: 'Point', coordinates:[" + LNG + ", " + LAT+"]}," + etc
 				location = location.replace("'", "\"")
-			print(location)
 			
-			with open('tt.json', 'a') as file:
+			with open(output_file, 'a') as file:
 				file.write(location+'\n')
 
 			i = i+1
